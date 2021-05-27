@@ -3,49 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/styles.css">
   <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <script src="https://kit.fontawesome.com/0c29b597aa.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  Samuel Green
-  Available to Walk
+  <main class="container">
 
-  That sounds great. I’d be happy with that.
+    <div class="app-container">
+      
+      <div class="app-container__header">
 
-  Could you send over some pictures of your dog, please?
+        <div class="app-container__header-top">
+          <div class="app-container__header-top-notch"></div>
+        </div>
 
-  Here are a few pictures. She’s a happy girl!
+        <div class="app-container__header-bottom">
 
-  Can you make it?
+          <i class="fas fa-chevron-left"></i>
+          <div class="app-container__header-portrait">
+            <img class="app-container__header-portrait-avatar" src="images/avatar.jpg" alt="Avatar">
+          </div>
+          <div class="app-container__header-content-id">
+            <p class="app-container__header-content-id-name">Samuel Green</p>
+            <p class="app-container__header-content-id-state">Available to Walk</p>
+          </div>
+          <i class="fas fa-ellipsis-v"></i>
 
-  She looks so happy! The time we discussed works. How long shall I take her out for?
+        </div>
 
-  30 minute walk
-  $29
+      </div>
+      
+    That sounds great. I’d be happy with that.
 
-  1 hour walk
-  $49
+      Could you send over some pictures of your dog, please?
 
-  Type a message…
+      Here are a few pictures. She’s a happy girl!
 
-  Simple booking
+      Can you make it?
 
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
-  
-  <div class="attribution">
+      She looks so happy! The time we discussed works. How long shall I take her out for?
+
+      30 minute walk
+      $29
+
+      1 hour walk
+      $49
+
+      Type a message…
+   </div>
+
+   <div class="claim-container">
+      <h1>Simple booking</h1>
+      <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to 
+      discuss arrangements and make bookings. Once the walk has been completed you can rate 
+      your walker and book again all through the chat.</p>
+    </div>
+
+  </main>
+<!--   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
