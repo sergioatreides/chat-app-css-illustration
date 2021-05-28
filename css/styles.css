@@ -12,7 +12,9 @@
     /* Secundary colors */
     --white: hsl(0, 0%, 100%);
     --light-grayish-violet: hsl(270, 20%, 96%); /* app background */
-    --very-light-magenta: hsl(289, 100%, 72%) /* radio button outline */
+    --very-light-magenta: hsl(289, 100%, 72%); /* radio button outline */
+
+    --dialog-left-background: hsl(266, 39%, 93%);
 }
 * {
     box-sizing: border-box;
@@ -24,36 +26,46 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+/* ----------------------  APP CONTAINER  ----------------------- */
+
 .app-container {
+    background-color: var(--light-grayish-violet);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(10, auto);
-    height: 500px;
+    /* height: 500px; */
     width: 300px;
     border: 10px solid var(--white);
     border-radius: 30px;
     overflow: hidden;
+    filter: drop-shadow(5px 5px 15px var(--grayish-blue));
 }
+
+/* -------- App Container header ----------- */
+
 .app-container__header {
     display: flex;
     flex-direction: column;
     background: linear-gradient(to right, var(--light-violet-gradient), var(--light-magenta-gradient));
     color: var(--white);
+    height: 82px;
+    margin-bottom: 15px;
 }
 .app-container__header-top {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    height: 30px;
+    height: 22px;
     width: 100%;
-    margin-bottom: 17px;
+    margin-bottom: 15px;
 }
 .app-container__header-top-notch {
-    width: 60%;
+    width: 55%;
     height: 100%;
     background-color: white;
-    border-radius: 0px 0px 25px 25px;
+    border-radius: 0px 0px 17px 17px;
 }
 .app-container__header-bottom {
     display: flex;
@@ -65,31 +77,96 @@ body {
 .app-container__header-content-id {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 78%;
 }
 .app-container__header-portrait {
-    padding-left: 10px;
+    display: flex;
+    align-items: center;
     padding-right: 10px;
 }
 .app-container__header-portrait-avatar {
     width: 30px;
-    border: 1px solid var(--white);
+    border: 2px solid var(--white);
     border-radius: 100%;
+    align-self: center;
 }
 .app-container__header-content-id-state {
     color: var(--pale-violet);
     margin: 0;
+    font-size: .6em;
 }
 .app-container__header-content-id-name {
-    margin: 0;
+    margin: 0px 0px 3px 0px;
+    font-weight: bold;
+    font-size: .8em;
 }
-.fa-ellipsis-v {
-    margin-right: 0px;
-    justify-content: center;
+.material-icons.md-18 { 
+    font-size: 18px; 
 }
 
+/* -------- App Container dialogs ----------- */
 
+.dialog {
+    display: block;
+    width: 55%;
+    font-size: .6em;
+    padding: 10px;
+    margin-bottom: 10px;
+    line-height: 1.3em;
+}
+.app-container__dialog {
+    color: var(--moderate-violet);
+    background-color: var(--dialog-left-background);
+    border-radius: 13px 13px 13px 5px;
+    margin-left: 10px;
+}
+.app-container__dialog-sended {
+    color: var(--dark-grayish-violet);
+    background-color: var(--white);
+    justify-self: flex-end;
+    margin-right: 10px;
+    border-radius: 13px 13px 5px 13px;
+    filter: drop-shadow(0px 2px 7px var(--grayish-blue));
+}
+.special {
+    width: 35%;
+}
 
+/* -------- App Container thumbs ----------- */
+
+.app-container__thumbs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+.app-container__thumbs-picture {
+    width: 50px;
+    border-radius: 25%;
+    margin-right: 10px;
+}
+
+/* -------- App Container options ----------- */
+
+.app-container__dialog-price {
+    background: linear-gradient(to left, var(--light-violet-gradient), var(--light-magenta-gradient)); 
+    color: var(--white);
+    width: 70%;
+    margin-left: 10px;
+    font-size: .6em;
+    padding: 12px 0px 12px 10px;
+    margin-bottom: 10px;
+    border-radius: 13px 13px 13px 5px;
+}
+.app-container__dialog-price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* -------- 2,5 horas   ----*/
 
 
 .attribution { 
