@@ -8,9 +8,12 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/styles.css">
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <title>Frontend Mentor | Chat App</title>
 </head>
+
 <body>
+
+  <div class="background background__top-left"></div>
 
   <main class="container">
 
@@ -63,32 +66,42 @@
       </div>
 
       <div class="app-container__dialog-price">
-        <span class="material-icons md-18">radio_button_unchecked</span>
-          30 minute walk
-          $29
+        <span class="material-icons md-18 faded">radio_button_unchecked</span>
+        <span class="app-container__dialog-price__service">30 minute walk</span>
+        <span class="app-container__dialog-price__price">$29</span>
       </div>
       <div class="app-container__dialog-price">
-        <span class="material-icons md-18">radio_button_unchecked</span>
-          1 hour walk
-          $49
-      </div>
-      
+        <span class="material-icons md-18 faded">radio_button_unchecked</span>
+        <span class="app-container__dialog-price__service">1 hour walk</span>
+        <span class="app-container__dialog-price__price">$49</span>
       </div>
 
-      Type a message…
+      <div class="app-container__placeholder">
+        <span class="app-container__placeholder-text">Type a message…</span>
+        <div class="app-container__placeholder-button">
+          <span class="material-icons md-18">arrow_forward_ios</span>
+        </div>
+      </div>
+
    </div>
 
    <div class="claim-container">
-      <h1>Simple booking</h1>
-      <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to 
+      <h1 class="claim-container__h1">Simple booking</h1>
+      <p class="claim-container__p">Stay in touch with our dog walkers through the chat interface. This makes it easy to 
       discuss arrangements and make bookings. Once the walk has been completed you can rate 
       your walker and book again all through the chat.</p>
     </div>
 
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <div class="background background__bottom-right"></div>
+
   </main>
-<!--   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+
+
+
 </body>
 </html>

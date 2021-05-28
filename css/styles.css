@@ -21,10 +21,38 @@
     font-family: 'Rubik', sans-serif;
 }
 body {
+    width: 100vw;
     background-color: var(--light-grayish-violet);
+    margin: 0;
+}
+.container {
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+/* ------------------------  BACKGROUND  ------------------------ */
+
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 80vh;
+    z-index: -1;
+}
+.background__top-left {
+    background-color: var(--light-violet-gradient);
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    transform: translateX(-50vw);
+}
+.background__bottom-right {
+    background-color: var(--dialog-left-background);
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    transform: translate(50vw, 40vh);
 }
 
 /* ----------------------  APP CONTAINER  ----------------------- */
@@ -34,11 +62,12 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(10, auto);
-    /* height: 500px; */
-    width: 300px;
-    border: 10px solid var(--white);
+    width: 270px;
+    border: 8px solid var(--white);
     border-radius: 30px;
     overflow: hidden;
+    margin-bottom: 40px;
+    margin-top: 40px;
     filter: drop-shadow(5px 5px 15px var(--grayish-blue));
 }
 
@@ -48,8 +77,9 @@ body {
     display: flex;
     flex-direction: column;
     background: linear-gradient(to right, var(--light-violet-gradient), var(--light-magenta-gradient));
+    border-radius: 5px;
     color: var(--white);
-    height: 82px;
+    height: 75px;
     margin-bottom: 15px;
 }
 .app-container__header-top {
@@ -57,9 +87,9 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    height: 22px;
+    height: 18px;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 .app-container__header-top-notch {
     width: 55%;
@@ -77,7 +107,7 @@ body {
 .app-container__header-content-id {
     display: flex;
     flex-direction: column;
-    width: 78%;
+    width: 80%;
 }
 .app-container__header-portrait {
     display: flex;
@@ -108,9 +138,9 @@ body {
 
 .dialog {
     display: block;
-    width: 55%;
+    width: 60%;
     font-size: .6em;
-    padding: 10px;
+    padding: 8px;
     margin-bottom: 10px;
     line-height: 1.3em;
 }
@@ -129,7 +159,7 @@ body {
     filter: drop-shadow(0px 2px 7px var(--grayish-blue));
 }
 .special {
-    width: 35%;
+    width: 40%;
 }
 
 /* -------- App Container thumbs ----------- */
@@ -139,13 +169,13 @@ body {
     flex-direction: row;
     justify-content: flex-end;
     width: 100%;
-    margin-top: 8px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 8px;
 }
 .app-container__thumbs-picture {
-    width: 50px;
+    width: 45px;
     border-radius: 25%;
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
 /* -------- App Container options ----------- */
@@ -156,20 +186,79 @@ body {
     width: 70%;
     margin-left: 10px;
     font-size: .6em;
-    padding: 12px 0px 12px 10px;
-    margin-bottom: 10px;
+    padding: 10px 0px 10px 10px;
+    margin-bottom: 8px;
     border-radius: 13px 13px 13px 5px;
+}
+.faded {
+    color: var(--very-light-magenta);
 }
 .app-container__dialog-price {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+.app-container__dialog-price__service {
+    margin-left: 10px;
+}
+.app-container__dialog-price__price {
+    margin-right: 20px;
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 1.3em;
+}
 
-/* -------- 2,5 horas   ----*/
+/* -------- App Container dialogs ----------- */
 
+.app-container__placeholder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    background-color: var(--white);
+    border-radius: 50px;
+}
+.app-container__placeholder-text {
+    padding: 12px 23px;
+    font-size: .8em;
+    color: var(--grayish-blue);
+}
+.app-container__placeholder-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    margin-right: 7px;
+    margin-left: auto;
+    background-color: var(--very-dark-desaturated-violet);
+    color: var(--white);
+}
+
+/* ----------------------  CLAIM CONTAINER  ----------------------- */
+
+.claim-container {
+    text-align: center;
+    width: 85%;
+    margin-bottom: 100px; 
+}
+.claim-container__h1 {
+    color: var(--very-dark-desaturated-violet);
+}
+.claim-container__p {
+    color: var(--dark-grayish-violet);
+    line-height: 1.7em;
+}
+
+/* ----------------------  ATRIBUTION  ----------------------- */
 
 .attribution { 
+    margin-top: 10px;
+    margin-bottom: 20px;
     font-size: 11px; 
     text-align: center; 
 }
