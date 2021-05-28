@@ -57,7 +57,7 @@ body {
     /* z-index: -1; */
 }
 .background__top-left {
-    background-color: var(--light-violet-gradient);
+    background: linear-gradient(45deg, var(--light-violet-gradient), var(--light-magenta-gradient));
     border-bottom-left-radius: 500px;
     border-bottom-right-radius: 500px;
     transform: translateX(-40vw);
